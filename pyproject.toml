@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "ragtranscript"
+version = "0.1.0"
+description = ""
+authors = ["shadi-fsai <163780314+shadi-fsai@users.noreply.github.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+chromadb = "^0.5.15"
+langchain-text-splitters = "^0.3.0"
+litellm = "^1.50.1"
+
+[tool.poetry.scripts]
+rt = "ragtranscript.main:run"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
