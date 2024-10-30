@@ -17,9 +17,6 @@ class RAG:
         self._idCounter = 0
         print("RAG initialized")
 
-    def reset(self):
-        self._client.reset()
-
     def add_content(self, content, metadatadict):
         textsplitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=100, length_function=len,
             is_separator_regex=False)
@@ -50,11 +47,9 @@ class RAG:
             n_results=n_results
         )
 
-
 def run():
     #Create a ChromaDB client
     rag = RAG()
-    rag.reset() #todo remove this if you want to keep the data
 
     ticker = input("Please enter the ticker name: ")
 
