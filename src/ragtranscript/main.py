@@ -60,7 +60,7 @@ def run():
 
     #Query the collection
     qry = input(f"What question do you want to ask about {ticker}: ")
-    #example: "How AMN sees its suppliers behaving"
+    
     results = rag.query(
          query_texts=[qry], 
          n_results=20)
