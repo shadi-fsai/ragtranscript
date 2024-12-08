@@ -7,7 +7,7 @@ import litellm
 
 dotenv.load_dotenv()
 
-llmmodel = 'gemini/gemini-1.5-flash' #"groq/llama3-8b-8192"
+llmmodel = "groq/Llama-3.3-70b-Versatile"
 def call_lite_llm(input, responseFormat = None):    
     response = litellm.completion(
       model=llmmodel,
