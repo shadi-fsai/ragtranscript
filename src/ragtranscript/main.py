@@ -65,8 +65,8 @@ def run():
          query_texts=[qry], 
          n_results=20)
 
-    print(analyze_context(str(results), 
+    print("\n" + analyze_context(str(results), 
         "Only use information that I provide and nothing from your internal knowledge. Summarize this text and answer "+qry,
-          ""))
+          ". Use markdown for your output, keep it to less than 600 words, no need to reiterate how you reached your answer."))
 
     return 0
